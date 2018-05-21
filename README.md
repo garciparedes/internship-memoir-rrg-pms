@@ -3,7 +3,7 @@
 
 # Description
 
-TODO 
+Internship memory based on my stance at a Research Group at University of Valladolid, Spain.
 
 
 ## Author
