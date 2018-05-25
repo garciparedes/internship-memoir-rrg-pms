@@ -1,11 +1,11 @@
-\documentclass[a4paper,spanish]{article}
+\documentclass[11pt,a4paper,spanish]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-tabla]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[margin={18mm, 26mm}]{geometry}
 \usepackage[hidelinks]{hyperref}
-
+\usepackage{dirtytalk}
 \usepackage{graphicx}
 \graphicspath{ {./assets/img/} }
 
@@ -28,9 +28,9 @@
     \includegraphics[width=0.5\textwidth]{logo_uva}
     \par\vspace{0.5cm}
     {\scshape\large Grado en Estadística - Facultad de Ciencias \par}
-		\vspace{1cm}
+		\vspace{3.5cm}
 		{\scshape\LARGE G.I.R. - Probabilidad y Estadística Matemática\par}
-		\vspace{1.5cm}
+		\vspace{3.5cm}
 		{\Huge\bfseries Prácticas Externas\par}
 		\vspace{2cm}
 		{\large
@@ -86,9 +86,9 @@
     \subsection{Tutor en la Empresa}
 
       \begin{itemize}
-        \item \emph{Nombre y apellidos:} Pedro Cesar Alvarez Esteban
-        \item \emph{Cargo en la empresa:} Coordinador
-        \item \emph{Email:} lagarcia@eio.uva.es
+        \item \emph{Nombre y apellidos:} Pedro César Alvarez Esteban
+        \item \emph{Cargo en la empresa:} Miembro del GIR
+        \item \emph{Email:} pedrocesar.alvarez@uva.es
       \end{itemize}
 
 
@@ -106,27 +106,78 @@
   \section{Breve Descripción de la Empresa}
 
     \paragraph{}
-    [TODO]
+    La empresa donde he realizado mis prácticas no es una empresa como tal, sino un \emph{grupo de investigación reconocido} perteneciente a la Universidad de Valladolid, cuyo nombre es \emph{Probabilidad y Estadística Matemática}. En dicho grupo de investigación, se llevan a cabo tareas relacionadas con el campo de la estadística en general. De manera más detallada, la descripción del grupo es la siguiente:
+
+    \paragraph{}
+    \say{\emph{Las actividades del grupo se enmarcan dentro de la investigación en Teoría de la Probabilidad y Estadística Matemática de carácter básico. La filosofía que inspira el trabajo del grupo tiene su punto de partida en el análisis de conceptos básicos de la Estadística desde distintas ópticas (ideas geométricas de representación y aproximación, métricas probabilísticas, robustez o estabilidad de los procedimientos, etc.) con el ánimo de desarrollar nuevos métodos estadísticos y estudiar su implementación práctica y sus propiedades en comparación con procedimientos ya existentes. Desde esta perspectiva, las líneas prioritarias se pueden clasificar como:}}
+
+    \begin{itemize}
+      \item \emph{Métodos estadísticos robustos. Técnicas de recorte y aplicaciones estadísticas.}
+      \item \emph{Estudio de métricas probabilísticas y de sus aplicaciones estadísticas.}
+      \item \emph{Transporte óptimo y sus aplicaciones estadísticas.}
+      \item \emph{Métodos basados en remuestreo. Técnicas bootstrap.}
+      \item \emph{Análisis de datos funcionales.}
+    \end{itemize}
+
+    \paragraph{}
+    Además del ámbito de la investigación, este grupo de investigación también realiza otras tareas como labores de consultoria para empresas externas. Estas se basan generalemente en el análisis de datos que estas proporcionan, para obtener conclusiones y tratar de mejorar sus procesos de negocio.
+
+    \paragraph{}
+    Entre las empresas con las que colaboran se encuentra \emph{CESVIMAP}. Esta empresa es un centro de experimentación para la seguridad vial, que a su vez pertenece a la empresa \emph{MAPFRE} (una aseguradora cuya sede se encuentra en España).
+
+    \paragraph{}
+    \say{\emph{El ámbito de actuación de CESVIMAP comprende el estudio de turismos, vehículos industriales y agrícolas y motocicletas. Las actividades del Centro se orientan hacia personal de talleres, compañías de seguros, fabricantes de vehículos, peritos, gabinetes especializados en la reconstrucción de accidentes e investigación de incendios, profesores y alumnos de formación profesional, y universitarios.}}
+
 
   \section{Memoria de Actividades}
 
     \paragraph{}
-    [TODO]
+    Las tareas que he llevado a cabo durante mi estancia en prácticas en el grupo de investigación se han basado principalmente en la utilización del lenguaje de programación estadística \emph{R} para tareas de procesamiento de datos procedentes de la empresa \emph{CESVIMAP}.
+
+    \paragraph{}
+    Para la realización de dichas tareas, mi trabajo se ha basado en un código fuente utilizado para un estudio anterior por el grupo de investigación. Por tanto, una de las primeras labores que tuve que llevar a cabo fue la comprensión del mismo, para poder comprender el contexto del mismo así como su propósito. De esta manera, mientras entendía el trabajo anterior, fui, mejorando mis habilidades con el lenguaje \emph{R} en cuestión, aprendiendo nuevas técnicas para el procesamiento de datos reales, que por limitaciones de tiempo en el resto de asignaturas del grado es imposible enseñar.
+
+    \paragraph{}
+    Una vez entendí el funcionamiento del código fuente que utilizaría como base para el procesamiento de los nuevos conjuntos de datos que la empresa \emph{CESVIMAP} suministraría al grupo de investigación, decidí tratar de modularizar y hacer más mantenible el mismo. Para ello, me apoyé en distintos documentos bibliográficos, así como documentación online del propio lenguaje \emph{R}. Durante esta fase también leí distintos artículos escritos por personas influyentes en el sector del análisis de datos mediante dicho lenguaje, para tratar de apoyarme en las técnicas que ellos utilizan para conseguir que el procesamiento de grandes cantidades de datos pueda ser mantenible e incrementable a largo plazo por personas diferentes de las que lo desarrollaron inicialmente.
+
+    \paragraph{}
+    Una vez modularizado el código fuente que se utilizaría para el procesamiento de los datos, la siguiente tarea que llevé a cabo es la de analizar más en detalle el funcionamiento de cada parte para tratar de localizar aquellos procedimientos que generaban un alto coste computacional. Una vez localizados, la siguiente tarea se basó en la optimización de los mismos para tratar de reducir los costes computacionales, teniendo en cuenta que este trabajo posteriormente podría ser utilizado para obtener distintas métricas y analíticas de manera más automatizada.
+
+    \paragraph{}
+    Al finalizar dicha fase, la empresa \emph{CESVIMAP} suministró los datos al grupo de investigación. Estos (como es lógico), presentaban ciertas características diferentes respecto de los del estudio anterior, por lo que la siguiente fase se basó en la adaptación del código fuente para que este pudiera procesar los datos de manera adecuada. Esta tarea fue un proceso iterativo entre modificaciones en el código fuente y comunicaciones con la empresa para poder comprender en mayor medida la nueva naturaleza de los datos. Por tanto, ocupó una gran cantidad de tiempo hasta que todo funcionó de manera adecuada.
+
+    \paragraph{}
+    Las últimas tareas que realicé durante mi estancia en prácticas en el grupo de investigación se basaron en la realización de un pequeño estudio de diagnóstico de algunas variables de los conjuntos de datos. Dichas variables se refieren a los tiempos necesarios para la realización de distintas fases en la reparación de vehículos, así como conteos de piezas que intervienen en dichos procesos.
 
 
   \section{Utilidad como complemento a la formación universitaria}
 
     \paragraph{}
-    [TODO]
+    Bajo mi punto de vista, las prácticas externas son un buen complemento formativo para los alumnos, ya que permiten que estos tengan una mejor aproximación acerca de cómo serán las tareas que después realizarán una vez entren en el mundo laboral.
+
+    \paragraph{}
+    Además, permiten aprender de manera más práctica aquellos conceptos teóricos que se enseñan en las asignaturas del grado, pero que por limitaciones de tiempo no pueden extenderse a casos prácticos. Esto no es algo negativo, sino que debe ser complentario a lo anterior, permitiendo a los alumnos adquirir una base sólida de los conceptos que después aplicarán en situaciones reales. Es por ello que las prácticas externas permiten al alumno tener un mayor acercamiento a estas situaciones.
+
+    \paragraph{}
+    En mi caso, las prácticas me han permitido comprender las dificultades que surjen en entornos reales en tareas de análisis de datos, ya que en muchas ocasiones hay tareas delicadas para las cuales es necesario tener unas buenas habilidades a la hora de desarrollar código. Esto se debe a que el procesamiento de grandes cantidades de datos conlleva dificultades computacionales que si no se tratan con cuidado pueden generar retrasos a la hora de obtener resultados.
+
+    \paragraph{}
+    Bajo mi punto de vista, esto es algo especialmente importante que se debe ser enfatizado, dado que los estudios del grado en estadística se enfocan en adquirir una buena base que permita precisamente entender el funcionamiento de la misma. Pero que, sin embargo, por dificultades temporales, no pueden centrarse en este tipo de tareas.
 
 
   \section{Utilidad para la futura inserción laboral}
 
     \paragraph{}
-    [TODO]
+    Las prácticas en empresa son una de las maneras para que se produzca un acercamiento entre alumnos a punto de terminar sus estudios, y empresas que demandan trabajadores con conocimientos avanzados en estadística. Debido a la gran demanda de trabajadores cualificados en estadística, las prácticas externas permiten a los alumnos tener una primera toma de contacto con entornos reales.
+
+    \paragraph{}
+    Esto es muy enriquecedor, ya que existen grandes diferencias entre la visión que se tiene en primera instancia sobre las tareas que un estadístico realizará en una empresa, con las que realmente desempeña. Una gran cantidad de alumnos piensa que un titulado en estadística se dedicará únicamente a analizar resultado. Sin embargo, estas tareas van mucho más allá, ya que estos se encargan de muchas más tareas. Estas van desde la planificación para adquirir datos, almacenarlos y mantenerlos, hasta prepararlos para futuros análisis. Lo cual parece sencillo en ejemplos prototípicos, pero se hace inmensamente complicado para análisis de grandes conjuntos de datos.
+
+    \paragraph{}
+    En mi caso particular, dado que las prácticas externas han sido realizadas en la propia universidad, la visión futura hacia la inserción laboral es algo difusa, ya que he actuado como colaborador del grupo de invesitación. Sin embargo, esta experiencia es muy enriquecedora, ya que muchas empresas demandan titulados que tengan experiencia en ámbitos cercanos al académico. Por tanto, a pesar de que directamente, estas prácticas externas no tengan una repercusión directa en mi futura inserción laboral, creo que en el futuro serán tenidas en cuenta por aquellas empresas donde decida buscar empleo.
 
 
-  \section{Valoración personal y Sugerencias de mejora}
+  \section{Valoración personal y sugerencias de mejora}
 
     \paragraph{}
     [TODO]
