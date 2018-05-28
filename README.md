@@ -1,9 +1,9 @@
-# Internship Memory: Recognized Research Group - Probability and Matemathical Statistics
+# Internship Memoir: Recognized Research Group - Probability and Matemathical Statistics
 
 
 ## Description
 
-Internship memory based on my stance at a Research Group at University of Valladolid, Spain.
+Internship memoir based on my stance at a Research Group at University of Valladolid, Spain.
 
 
 ## Contents
